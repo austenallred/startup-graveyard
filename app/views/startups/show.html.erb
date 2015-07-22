@@ -10,7 +10,7 @@
     </tr>
   </thead>
 
-  <tbody">
+  <tbody>
       <tr>
         <td><%= @startup.name %></td>
         <td><%= @startup.description %></td>
@@ -19,5 +19,8 @@
   </tbody>
 </table>
 
-<button class="btn btn-default"><%= link_to 'Edit', edit_startup_path(@startup) %></button>
-<button class="btn btn-default"><%= link_to 'Back', startups_path %></button>
+<p class="one">
+<%= link_to 'Edit', edit_startup_path(@startup), :class => 'btn btn-default' %>
+<%= link_to 'Back', startups_path, :class => 'btn btn-default' %> 
+<%= link_to 'Delete', @startup, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
+</p>

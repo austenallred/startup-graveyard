@@ -23,7 +23,7 @@
     <label><%= f.label :url %></label>
     <%= f.text_field :url, class: "form-control" %>
   </div>
-        <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
-  <button class="btn btn-default"><%= link_to 'Cancel', startups_path %></button>
+     <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
+    <%= link_to "Cancel", :back, {:class=>"btn btn-default"} %>
 </form>
 <% end %>
